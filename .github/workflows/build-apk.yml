@@ -19,8 +19,8 @@ jobs:
 
       - name: Install system dependencies
         run: |
-          sudo apt update
-          sudo apt install -y git zip unzip openjdk-11-jdk autoconf libtool pkg-config zlib1g-dev libncurses6-dev libncursesw6-dev libtinfo6 cmake libffi-dev libssl-dev
+          sudo apt update -qq || true
+          sudo apt install -y git zip unzip openjdk-11-jdk autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
 
       - name: Install buildozer
         run: |
@@ -34,5 +34,5 @@ jobs:
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: englishstudy-apk
+          name: english-app-apk
           path: bin/*.apk
