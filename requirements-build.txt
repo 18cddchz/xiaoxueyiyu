@@ -1,0 +1,16 @@
+# ============================================================
+# GitHub Actions 云端打包工具链（只装在打包机，不打进 APK）
+# 与 buildozer.spec 里的 requirements 区分：
+#   spec requirements  = 打进 APK 的运行时依赖（python3, kivy, plyer）
+#   本文件             = 打包机上的构建工具（buildozer / cython 等）
+# ============================================================
+
+# buildozer 打包器（1.6.x 稳定线，配合 python-for-android master）
+buildozer>=1.5,<1.7
+
+# p4a 编译配方要求 Cython 0.29.x；3.x 会导致配方编译失败，必须锁版本
+cython==0.29.34
+
+# 构建基础工具
+setuptools>=65
+virtualenv>=20

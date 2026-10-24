@@ -1,0 +1,26 @@
+# ============================================================
+# GitHub 仓库忽略规则
+# 打包中间产物、最终 APK 与本地运行时存档都不入库；
+# APK 由 GitHub Actions 构建后从 Actions 页面下载。
+# ============================================================
+
+# buildozer 缓存与产物
+.buildozer/
+bin/
+*.apk
+*.aab
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 运行时本地存档（应用首次运行在私有目录生成，仓库内不保留）
+english_data.json
+
+# 编辑器 / 系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
