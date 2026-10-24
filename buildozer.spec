@@ -13,7 +13,7 @@ title = 小学英语点读
 # 包名（英文小写，不能含中文、空格、连字符以外字符）
 package.name = englishstudy
 # 包域名（倒写域名，保证包名全局唯一）
-source.org = org.pep.study
+source.org = org.english.study
 
 # 应用版本号（改这里即改 APK 版本；Actions 产物名会带上该版本）
 version = 1.0.0
